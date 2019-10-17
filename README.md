@@ -100,4 +100,8 @@ gg<Ctrl v>G0A<something><Esc>
 gg<Ctrl v>G$A<something><Esc>
 ```
 
-
+## Record and execute from file
+write all keystrokes in `test.keys`
+```
+vim -s test.keys myInput.file
+```
