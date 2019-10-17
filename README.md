@@ -105,3 +105,18 @@ write all keystrokes in `test.keys`
 ```
 vim -s test.keys myInput.file
 ```
+
+| magics for saving | and reading and etc. |
+| ----------------------------- | --------------------------------------------------- |
+| :w >>foo                      | append the whole buffer to a file                   |
+| :.w >>foo                     | append current line to a file                       |
+| :$r foo                       | read foo into the end of the buffer                 |
+| :0r foo                       | read foo into the start, moving existing lines down |
+| :.,$w foo                     | write current line and below to a file              |
+| :r !ls                        | read ls output into cursor position                 |
+| :w !wc                        | send buffer to wc and display output                |
+| :.!tr ‘A-Za-z’ ‘N-ZA-Mn-za-m’ | apply ROT-13 to current line                        |
+| :w\|so %                      | chain commands: write and then source buffer        |
+| :e!                           | throw away unsaved changes, reload buffer           |
+| :hide edit foo                | edit foo, hide current buffer if dirty              |
+
