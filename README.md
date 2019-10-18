@@ -56,10 +56,15 @@ Using `\|` as or: Delete all lines except those contain "error", "warn" or "fail
 
 `[I` to list all occurrences of word under the cursor (same as `:g/`
 
+
 for complex search use
 
 ```
 :g/pattern
+```
+or
+```
+:il pattern
 ```
 
 search "pattern" and open a clickable list
