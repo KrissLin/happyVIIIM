@@ -169,4 +169,5 @@ vim -s test.keys myInput.file
 3. If you need to make changes to the search pattern `CTRL-R` `/` will place the existing search into the command line.
 4. Finally, you can put the contents of any register using `CTRL-R` `{register}`
 
-
+## Basic Calculation
+in insert mode, `Ctrl R = 2 ?+ 2 <CR> `
