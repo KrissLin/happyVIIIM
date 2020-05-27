@@ -174,8 +174,24 @@ in insert mode, `Ctrl R = 2 ?+ 2 <CR> `
 
 ## Modifying Registers
 `"qp` paste the contents of the register to the current cursor position
+
 `I` enter insert mode at the begging of the pasted line
+
 `^` add the missing motion to return to the front of the line
+
 `<Escape>` return to visual mode
+
 `"qyy yank` this new modified macro back into the q register
+
 `dd` delete the pasted register from the file your editing
+
+## small shortcuts
+Swap the current word with the next: `dawwP`
+
+`ea` - insert (append) at the end of the word
+
+Swap the current word with the next: dawwP
+
+wq or :x or `ZZ` - write (save) and quit
+
+q! or `ZQ` - quit and throw away unsaved changes
