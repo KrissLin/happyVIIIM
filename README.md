@@ -139,6 +139,12 @@ write all keystrokes in `test.keys`
 ```
 vim -s test.keys myInput.file
 ```
+on multiple files:
+```
+for file in *.txt; do
+        vim -s keys "$file"
+done
+```
 
 | magics for saving | and reading and etc. |
 | ----------------------------- | --------------------------------------------------- |
