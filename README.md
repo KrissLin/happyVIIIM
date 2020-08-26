@@ -163,6 +163,7 @@ done
 # Sorting columns of text
 
 ```
+:sort -u        sort and remove duplicate
 :%!column -t
 :%!sort -k2nr    column 2 asnumber reverse
 :%!sort -k4 -bk3g    sort by the the 4th column (-k4), followed by the 3rd column, but this time we require a few more switches. We ignore leading blank spaces (b), and this time we sort using a general numeric sort (g).
@@ -201,3 +202,6 @@ Swap the current word with the next: dawwP
 wq or :x or `ZZ` - write (save) and quit
 
 q! or `ZQ` - quit and throw away unsaved changes
+
+## Replay macro
+`@@
