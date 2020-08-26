@@ -130,16 +130,16 @@ Use `:v//d` to delete all lines that do *not* match the last search pattern, or 
 ## Insert something before or after each line
 
 ```
-gg<Ctrl v>G0A<something><Esc>
+gg<Ctrl v>G0I<something><Esc>
 gg<Ctrl v>G$A<something><Esc>
 ```
 
 ## Record and execute from file
-write all keystrokes in `test.keys`
+perform  `test.keys` to file:
 ```
 vim -s test.keys myInput.file
 ```
-on multiple files:
+or to multiple files:
 ```
 for file in *.txt; do
         vim -s keys "$file"
@@ -163,7 +163,7 @@ done
 # Sorting columns of text
 
 ```
-:sort -u        sort and remove duplicate
+:sort u        sort and remove duplicate
 :%!column -t
 :%!sort -k2nr    column 2 asnumber reverse
 :%!sort -k4 -bk3g    sort by the the 4th column (-k4), followed by the 3rd column, but this time we require a few more switches. We ignore leading blank spaces (b), and this time we sort using a general numeric sort (g).
@@ -172,12 +172,12 @@ done
 ## The `c_CTRL-R` family of maps
 
 1. You need not type variable names when using `:s/`, just use `CTRL-R` `CTRL-W` to insert the word under the cursor into the command line (caveat: this does not escape special characters, like `*` does).
-2. After making a small change using `ce`, you can search for the old word using `/` `CTRL-R` `-`. Then use `.` to repeat the change.
+2. After making a small change using `ce sth <Esc>`, you can search for the old word using `/ CTRL-R - <Enter>`. Then use `.` to repeat the change.
 3. If you need to make changes to the search pattern `CTRL-R` `/` will place the existing search into the command line.
-4. Finally, you can put the contents of any register using `CTRL-R` `{register}`
+4. Finally, you can put the contents of any register using `CTRL-R` `{register}` in input mode
 
 ## Basic Calculation
-in insert mode, `Ctrl R = 2 ?+ 2 <CR> `
+in insert mode, `Ctrl R = 2 + 2 <CR> `
 
 ## Modifying Registers
 `"qp` paste the contents of the register to the current cursor position
@@ -199,9 +199,13 @@ Swap the current word with the next: `dawwP`
 
 Swap the current word with the next: dawwP
 
-wq or :x or `ZZ` - write (save) and quit
+`ZZ` or :x  - write (save) and quit
 
-q! or `ZQ` - quit and throw away unsaved changes
+ `ZQ` - quit and throw away unsaved changes
 
 ## Replay macro
-`@@
+```
+@@
+```
+
+
