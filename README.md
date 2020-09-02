@@ -208,4 +208,56 @@ Swap the current word with the next: dawwP
 @@
 ```
 
+## Incrementing numbers
+
+Vim has `Ctrl-X` and `Ctrl-A` commands to decrement and increment numbers. When used with visual mode, you can increment numbers across multiple lines.
+
+If you have these HTML elements:
+```
+<div id="app-1"></div>
+<div id="app-1"></div>
+<div id="app-1"></div>
+<div id="app-1"></div>
+<div id="app-1"></div>
+```
+
+It is a bad practice to have several ids having the same name, so let's increment them to make them unique:
+- Move your cursor to the *second* "1".
+- Start block-wise visual mode and go down 3 lines (`Ctrl-V 3j`). This highlights the remaining  "1"s.
+- Run `g Ctrl-A`.
+
+You should see this result:
+```
+<div id="app-1"></div>
+<div id="app-2"></div>
+<div id="app-3"></div>
+<div id="app-4"></div>
+<div id="app-5"></div>
+```
+
+`g Ctrl-A` increments numbers on multiple lines. `Ctrl-X/Ctrl-A` can increment letters too. If you run:
+
+```
+:set nrformats+=alpha
+```
+
+The `nrformats` option instructs Vim which bases are considered as "numbers" for `Ctrl-A` and `Ctrl-X` to increment and decrement. By adding `alpha`, an alphabetical character is now considered as a number. If you have the following HTML elements:
+```
+<div id="app-a"></div>
+<div id="app-a"></div>
+<div id="app-a"></div>
+<div id="app-a"></div>
+<div id="app-a"></div>
+```
+
+Put your cursor on the second "app-a". Use the same technique as above (`Ctrl-V 3j` then `g Ctrl-A`) to increment the ids.
+```
+<div id="app-a"></div>
+<div id="app-b"></div>
+<div id="app-c"></div>
+<div id="app-d"></div>
+<div id="app-e"></div>
+```
+
+
 
