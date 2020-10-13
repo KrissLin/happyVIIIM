@@ -146,6 +146,15 @@ for file in *.txt; do
 done
 ```
 
+
+## edit multiple files
+
+1. Record the edit motions to a macro.
+2. Use `:args filename*.*` to open all files that are to be modified into the buffer.
+(Use `:args` to see the list of all files.)
+3. `:argdo norm@aw` to apply macro to all files and save changes.
+4. `:wal` to make sure everything is saved. 
+
 | magics for saving | and reading and etc. |
 | ----------------------------- | --------------------------------------------------- |
 | :w >>foo                      | append the whole buffer to a file                   |
@@ -259,5 +268,10 @@ Put your cursor on the second "app-a". Use the same technique as above (`Ctrl-V 
 <div id="app-e"></div>
 ```
 
+## copy all lines containing args to line 2
+```:g/args/t2```
+
+## see a list of editable command histry
+```q:```
 
 
