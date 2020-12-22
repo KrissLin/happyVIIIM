@@ -274,4 +274,6 @@ Put your cursor on the second "app-a". Use the same technique as above (`Ctrl-V 
 ## see a list of editable command histry
 ```q:```
 
+## go to start / end in visual mod
+v_o v_O
 
