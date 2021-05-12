@@ -71,7 +71,7 @@ search "pattern" and open a clickable list
 
 ```
 :w
-;vimgrep /pattern/ %
+:vimgrep /pattern/ %
 :copen
 ```
 
@@ -277,3 +277,5 @@ Put your cursor on the second "app-a". Use the same technique as above (`Ctrl-V 
 ## go to start / end in visual mod
 v_o v_O
 
+## paste faster from clipboard
+"+p
