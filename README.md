@@ -279,3 +279,8 @@ v_o v_O
 
 ## paste faster from clipboard
 "+p
+
+## match regex pattern and add to it
+```
+:%s/\d\+/^M&/g
+```
