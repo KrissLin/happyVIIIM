@@ -1,6 +1,12 @@
 # happyVIIIM
 vim cheatsheet XD
 
+## VIM Power Substitute
+interactive substitude changes dick after fred to joe btw mark a and mark b 
+```
+:'a,'bg/fred/s/dick/joe/igc
+```
+
 ## Delete all lines containing pattern
 
 ```
