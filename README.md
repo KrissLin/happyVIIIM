@@ -290,3 +290,12 @@ v_o v_O
 ```
 :%s/\d\+/^M&/g
 ```
+## line number like:
+```
+data[0] = "foo"
+data[0] = "foo"
+data[0] = "foo"
+data[0] = "foo"
+```
+to give each line a different number:
+C-v and select each 0, use g C-a
